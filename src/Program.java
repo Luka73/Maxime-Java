@@ -39,9 +39,11 @@ public class Program {
         Boleto boleto = new Boleto();
         System.out.println("Vencimento: " + boleto.getVencimento());
         boleto.setValor(reg.getTotal());
-        System.out.println("Valor a pagar: " + boleto.getValor());
+        boleto.setTaxa(3.20);
         boleto.setComprador("Luana Fernandes");
         System.out.println(boleto.getComprador());
+        boleto.aplicaDesconto(10, true);
+        System.out.println("Valor a pagar: " + boleto.getValor());
 
     }
 }
